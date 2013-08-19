@@ -1,0 +1,18 @@
+;--------------------------------
+; CFGED.DEF module definition file
+;--------------------------------
+
+;NAME           CFGED  WINDOWAPI
+
+;DESCRIPTION    'OS/2-Konfigurationsinspektor, (C) Lutz GrÅneberg, 1991'
+;PROTMODE
+;HEAPSIZE       8000
+;STACKSIZE      16392
+
+
+NAME            STDPRGM    WINDOWAPI
+
+DESCRIPTION    'StdPrgm Programs'
+PROTMODE
+HEAPSIZE        1024
+STACKSIZE       8192

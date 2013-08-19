@@ -1,0 +1,79 @@
+DLGINCLUDE 1 "c:\projects\cfged\maindlg.H"
+
+DLGTEMPLATE LDCFG_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Configuration file selection", LDCFG_DLG, 12, 6, 168, 84, 
+            WS_VISIBLE, FCF_TITLEBAR
+    BEGIN
+        LTEXT           "There are several configuration files:", 301, 4, 72, 
+                        160, 8
+        LISTBOX         LDCFG_LB, 4, 28, 156, 40
+        LTEXT           "select your choice!", 303, 4, 16, 88, 8
+        DEFPUSHBUTTON   "OK", LDCFG_OK_BUTT, 112, 4, 40, 14
+    END
+END
+
+DLGTEMPLATE ABOUT_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "About CfgEd", ABOUT_DLG, 4, -12, 296, 144, WS_VISIBLE, 
+            FCF_TITLEBAR
+    BEGIN
+        CTEXT           "OS/2 Configuration Editor V1.0 beta", 101, 12, 132, 
+                        276, 8
+        CTEXT           "Copyright (c) 1992 Lutz Grueneberg", 102, 8, 120, 
+                        276, 8, DT_VCENTER
+        CTEXT           "Please send error reports and comments to the autho"
+                        "r via E-Mail:", 103, 4, 40, 284, 8
+        CTEXT           "grueneberg@rrzn.uni-hannover.dbp.de", 104, 4, 28, 
+                        288, 8
+        DEFPUSHBUTTON   "OK", AB_OK_BUTT, 128, 4, 40, 14
+        LISTBOX         AB_LB, 4, 52, 288, 64, LS_HORZSCROLL
+                        PRESPARAMS PP_FONTNAMESIZE, 0x482E3031L, 0x65766C65L, 
+                        0x61636974L
+    END
+END
+
+DLGTEMPLATE PR_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "edit property", PR_DLG, 9, 8, 252, 54, FS_NOBYTEALIGN | 
+            WS_VISIBLE, FCF_TITLEBAR | FCF_NOBYTEALIGN
+    BEGIN
+        LTEXT           "Comment", PR_COMMENT, 12, 41, 232, 8, NOT WS_GROUP
+        ENTRYFIELD      "Text", PR_EDIT_FIELD, 11, 28, 227, 8, ES_MARGIN
+        DEFPUSHBUTTON   "OK", PR_OK_BUTT, 9, 6, 46, 13
+        PUSHBUTTON      "Cancel", PR_CANCEL_BUTT, 101, 6, 46, 13
+        PUSHBUTTON      "Help", PR_HELP_BUTT, 193, 6, 46, 13
+        DEFPUSHBUTTON   "OK", PR_OK_BUTT, 9, 6, 46, 13
+    END
+END
+
+DLGTEMPLATE MAIN_BROWSER LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "OS/2 Configuration Editor", MAIN_BROWSER, 0, 0, 237, 192, 
+            FS_NOBYTEALIGN | NOT FS_DLGBORDER | FS_BORDER | WS_VISIBLE, 
+            FCF_SYSMENU | FCF_TITLEBAR | FCF_MINBUTTON
+    BEGIN
+        LISTBOX         MAIN_LB, 8, 20, 224, 156, LS_HORZSCROLL
+        PUSHBUTTON      "Edit", EDIT_BUTT, 12, 4, 38, 13
+        PUSHBUTTON      "Browse", BROWSE_BUTT, 52, 4, 38, 13
+        PUSHBUTTON      "Insert", INSERT_BUTT, 100, 4, 38, 13
+        PUSHBUTTON      "Append", APPEND_BUTT, 140, 4, 38, 13
+        PUSHBUTTON      "Delete", DELETE_BUTT, 188, 4, 38, 13
+    END
+END
+
+DLGTEMPLATE SB_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Text", SB_DLG, 69, 14, 160, 145, FS_NOBYTEALIGN | WS_VISIBLE, 
+            FCF_TITLEBAR
+    BEGIN
+        LTEXT           "Text", SB_TEXT, 13, 130, 128, 8
+        LISTBOX         SB_LB, 13, 34, 136, 92, LS_HORZSCROLL
+        PUSHBUTTON      "Insert", SB_INSERT_BUTT, 13, 18, 38, 13
+        PUSHBUTTON      "Append", SB_APPEND_BUTT, 61, 18, 38, 13
+        PUSHBUTTON      "Delete", SB_DELETE_BUTT, 109, 18, 38, 13
+        PUSHBUTTON      "Help", SB_HELP_BUTT, 13, 2, 38, 13
+        PUSHBUTTON      "Cancel", SB_CANCEL_BUTT, 61, 2, 38, 13
+        PUSHBUTTON      "OK", SB_OK_BUTT, 109, 2, 38, 13
+    END
+END
